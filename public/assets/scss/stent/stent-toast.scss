@@ -1,0 +1,15 @@
+#stent-toast-wrapper {
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  z-index: 10000;
+  .alert {
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  #stent-toast-wrapper {
+    top: 1rem;
+  }
+}

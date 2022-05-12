@@ -1,0 +1,141 @@
+#contactModal {
+  height: 100%;
+
+  .modal-content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: $gray-100;
+  }
+
+  #loader-wait-signals {
+    position: relative;
+    height: 150px;
+  }
+  
+}
+
+#contacts-filter-wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+  border-top: 1px solid $gray-200;
+
+  #filter-by-title {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .form-group {
+    margin: 0;
+  }
+
+  .filter-table {
+    &.active {
+      background-color: $primary;
+      color: #ffffff;
+    }
+  }
+
+  .filter-table-select {
+    font-size: 12px;
+    height: 30px;
+    padding: 0 10px;
+  }
+
+  .filter-table-input {
+    font-size: 12px;
+    height: 30px;
+    border-radius: 4px;
+  }
+}
+
+#contacts-count {
+  font-size: 14px;
+  display: block;
+  margin-top: -2px;
+  position: absolute;
+  top: 17px;
+  right: 27px;
+}
+
+#contacts-result .selected {
+  &:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: -1.5rem;
+    top: 0;
+    width: 8px;
+    background-color: $primary;
+  }
+}
+
+.signal-type {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  position: relative;
+
+  span {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+}
+
+.signal-vertical-bar {
+  height: 100%;
+  width: 1px;
+  position: absolute;
+  border-right: 1px solid $gray-400;
+  top: 0;
+  left: 50%;
+}
+
+#contact-nav-links {
+  .nav-link {
+    cursor: pointer;
+  }
+}
+
+.mapouter {
+  position: relative;
+  text-align: right;
+  height: 400px;
+  width: 100%;
+}
+.gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 400px;
+  width: 100%;
+}
+
+.company-avatar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $white;
+  position: relative;
+
+  span {
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+}
+
+#contacts-table-wrapper {
+  .a-contact {
+    cursor: pointer;
+  }
+}
+
+#toogleFilters {
+  cursor: pointer;
+}

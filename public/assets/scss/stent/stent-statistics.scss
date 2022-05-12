@@ -1,0 +1,112 @@
+.main-content {
+  .container-fluid {
+    &.statistics-container {
+      padding-right: 12px !important;
+      padding-left: 12px !important;
+      .table-sm th,
+      .table-sm td {
+        padding: 0.5rem;
+      }
+
+      .table {
+        .groupped-header {
+          background: #eae7f2;
+          td {
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bootstrap-select {
+  .dropdown-menu {
+    .selected {
+      .check-mark {
+        &:after {
+          content: "\e92b";
+        }
+      }
+    }
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        span {
+          &.check-mark {
+            display: flex !important;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $gray-700;
+            border-radius: 0.2rem;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            position: relative !important;
+            right: initial !important;
+            top: initial !important;
+            &:after {
+              /* content: "\e92b"; */
+              content: "";
+              font-family: "Feather" !important;
+              speak: none;
+              font-style: normal;
+              font-weight: normal;
+              font-variant: normal;
+              text-transform: none;
+              line-height: 1;
+              -webkit-font-smoothing: antialiased;
+              -moz-osx-font-smoothing: grayscale;
+              height: unset;
+              width: unset;
+              border: none;
+              transform: none;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dropdown-toggle {
+    .filter-option  {
+        .avatar.avatar-sm{
+            display: none;
+        }
+        .ambassador-field {
+            display: inline-block;
+        }
+    }
+    
+}
+}
+
+.colSettings .filter-option-inner-inner:after{
+  content: 'Columns Settings';
+  display: block;
+  position: absolute;
+  top: 0;
+  visibility: visible;
+}
+.colSettings::after{
+  content: "\e9c4" !important;
+}     
+
+.colSettings .filter-option-inner-inner {
+  visibility: hidden;
+  position: relative;
+}
+.colSettings .filter-option {
+  display: none;
+}
+.onlyIcon > .bootstrap-select{
+ width: 33px !important;
+}
+.bootstrap-select.show-tick .dropdown-menu li a span.text::first-letter {
+  text-transform: uppercase;
+}

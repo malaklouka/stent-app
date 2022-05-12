@@ -1,0 +1,21 @@
+//
+// user-variables.scss
+// Use this to overwrite Bootstrap and Dashkit variables
+//
+
+// Example of a variable override to change Dashkit's background color
+// Remove the "//" to comment it in and see it in action!
+// $body-bg: #12263F;
+
+$font-size-12: 12px !default;
+
+.form-control:disabled,
+.form-control[readonly] {
+  opacity: 0.7 !important;
+  background-color: #fbf9fd !important;
+}
+
+.font-size-12{
+  font-size: $font-size-12;
+}
+

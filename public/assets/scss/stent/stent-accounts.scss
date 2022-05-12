@@ -1,0 +1,429 @@
+
+#accounts-filter-wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+  border-top: 1px solid $gray-200;
+  border-bottom: 1px solid $gray-200;
+  //margin-top: -33px;
+
+  #filter-by-title {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .form-group {
+    margin: 0;
+  }
+
+  .filter-table, .sort-table {
+    max-width: 200px;
+    &.active {
+      background-color: $primary;
+      color: #ffffff;
+    }
+  }
+
+  .filter-table-select, .sort-table-select {
+    font-size: 12px;
+    height: 30px;
+    padding: 0 10px;
+  }
+
+  .filter-table-input {
+    font-size: 12px;
+    height: 30px;
+    border-radius: 4px;
+  }
+
+  #filter-table-slider {
+    margin: 0 0 0 15px;
+    width: 180px;
+    height: 10px;
+
+    &:after {
+      content: "";
+      width: 210px;
+      height: 30px;
+      border: 1px solid $gray-400;
+      display: block;
+      border-radius: 5px;
+      position: absolute;
+      top: -11px;
+      left: -16px;
+    }
+
+    &.active {
+      
+      &:after {
+        border: 1px solid $primary;
+        background-color: $primary;
+      }
+      .noUi-connects {
+        background-color: $gray-600;
+      }
+      .noUi-connect {
+        background: white;
+      }
+    }
+  }
+
+  .noUi-connect {
+    background: $primary;
+  }
+
+  .noUi-horizontal .noUi-handle {
+    width: 20px;
+    height: 20px;
+    right: -10px;
+    border-radius: 100%;
+  }
+
+  .noUi-handle:after, .noUi-handle:before {
+    content: "";
+    display: none;
+  }
+
+  .noUi-tooltip {
+    background:none;
+    border: none;
+    font-size: 10px;
+    padding: 0;
+    bottom: 1px;
+    letter-spacing: -1px;
+  }
+
+}
+
+#accounts-wrapper {
+  min-height: 1px;
+  flex: 1;
+  
+  #accounts-table-wrapper {
+    margin-bottom: 20px;
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  #accounts-mover-col {
+    position: absolute;
+    height: calc(100% - 40px);
+    top: 0;
+    border-right: 1px solid $gray-300;
+    border-left: 1px solid $gray-300;
+    background-color: $gray-200;
+    cursor: col-resize;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1;
+
+    &:hover {
+      background-color: $gray-300;
+      img {
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 10px;
+      margin-top: 13px;
+      opacity: 0.75;
+    }
+  }
+
+  #accounts-table-empty {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: $white;
+    border-left: 1px solid $gray-200;
+    border-right: 1px solid $gray-200;
+    padding: 1em;
+
+    .alert {
+      margin: 0;
+      display: block;
+    }
+  }
+
+  #accounts-table {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: $white;
+    border-left: 1px solid $gray-200;
+    border-right: 1px solid $gray-200;
+    &.on-move {
+      //opacity: 0.25;
+      filter: blur(2px);
+    }
+    
+    #accounts-source-common-col,
+    #accounts-profile-common-col {
+      //background-color: yellow;
+    }
+
+    #accounts-source-actions-col,
+    #accounts-profile-actions-col {
+
+      .an-account-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      
+    }
+
+    #accounts-source-additionnal-col,
+    #accounts-profile-additionnal-col {
+      display: none;
+    }
+
+    #accounts-source-similarity-col {
+      // .an-account-wrapper {
+      //   border-left: 1px solid $gray-300;
+      // }
+    }
+    
+    .an-account-header {
+      height: 44px;
+      border-left: 1px solid $gray-200;
+      border-bottom: 1px solid $gray-200;
+      background-color: $gray-100;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 0.80em;
+      letter-spacing: inherit !important;
+      font-weight: 100;
+      white-space: nowrap;
+      padding: 1em;
+      color: $gray-600;
+      position: relative;
+      text-transform: uppercase;
+
+      &.an-account-header-center {
+        justify-content: center;
+      }
+    }
+
+    .source-avatar {
+      width: 30px;
+      height: 30px;
+      margin: 0 10px 0 0;
+      border-radius: 100%;
+    }
+
+    .an-account-wrapper {
+      height: 46px;
+      border-left: 1px solid $gray-200;
+      border-bottom: 1px solid $gray-200;
+      background-color: $gray-100;
+      position: relative;
+
+      &[data-contact-key] {
+        cursor: pointer;
+      }
+
+      &.an-account-wrapper-hover {
+        background-color: $white !important;
+      }
+
+      &.no-border-left {
+        border-left: none;
+      }
+
+      .user-avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        margin-right: 8px;
+      }
+
+      .user-infos {
+        max-height: 50px;
+        overflow: hidden;
+      }
+      .user-fullname {
+        margin: 0;
+        font-size: 14px;
+        line-height: 17px;
+      }
+      .user-info {
+        margin: 2px 0 0 0;
+        font-size: 11px;
+        line-height: 12px;
+        height: 13px;
+        overflow: hidden;
+        color: $gray-700;
+      }
+      .match-info {
+        color: $gray-700;
+        font-size: 12px;
+      }
+      .match-status-image {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .change-sort-from-table-header {
+      cursor: pointer;
+    }
+  
+    .is-sorted {
+      display: inline-block;
+      color: $primary;
+      &:after {
+        display: inline-block;
+        vertical-align: 0px;
+        margin-left: 5px;
+        font-size: 10px;
+      }
+    }
+    
+    .is-sorted-ASC {
+      &:after {
+        content: "▲";
+      }
+    }
+  
+    .is-sorted-DESC {
+      &:after {
+        content: "▼";
+        font-size: 9px;
+      }
+    }
+
+  }
+
+  .account-additional-message {
+    vertical-align: -2px;
+    position: absolute;
+    background: $gray-100;
+    height: 15px;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid $gray-100;
+    top: 8px;
+    right: 13px; 
+    color: $gray-700;
+  }
+
+  .left-shadow {
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 13px;
+      position: absolute;
+      top: 0;
+      left: -13px;
+      background-image: url('/assets/img/left-shadow.png');
+      background-repeat: repeat-y;
+      opacity: 0.5;
+    }
+  }
+
+  .right-shadow {
+    &::after {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 13px;
+      position: absolute;
+      top: 0;
+      right: -13px;
+      background-image: url('/assets/img/right-shadow.png');
+      background-repeat: repeat-y;
+      opacity: 0.5;
+    }
+  }
+
+  .accounts-profile-common-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .an-account-similarity {
+    background-color: $gray-300;
+    color: $white;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 1;
+    flex-direction: column;
+    line-height: 100%;
+
+    span {
+      font-size: 11px;
+      vertical-align: 5px;
+    }
+
+    &.confidence-uncertain {
+      background-color: $yellow;
+      color: $gray-800;
+    }
+    &.confidence-low { background-color: $gray-500; }
+    &.confidence-medium { background-color: $gray-600; }
+    &.confidence-similar { background-color: $gray-700; }
+    &.confidence-best { background-color: $primary; }
+
+    &.confidence-ambiguous { background-color: $gray-500; }
+    &.confidence-probable { background-color: $gray-600; }
+    &.confidence-exact { background-color: $primary; }
+    &.confidence-pending { color: $gray-800; background-color: $gray-100; }
+
+    .confidence-label {
+      font-size: 11px;
+      letter-spacing: -0.5px;
+    }
+  }
+  
+
+  .open-actions {
+    opacity: 0.5;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.90;
+    }
+  }
+
+  #accounts-table-footer {
+    display: flex;
+    padding: 0.7rem 1rem;
+    background-color: $gray-200;
+    border-bottom-left-radius: calc(0.5rem - 1px);
+    border-bottom-right-radius: calc(0.5rem - 1px);
+
+    strong {
+      font-size: 12px;
+      flex: 1;
+      text-align: right;
+    }
+  }
+
+  .profile-type-image {
+    position: absolute;
+    bottom: -2px;
+    right: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    border: 2px solid $gray-100;
+  }
+
+}

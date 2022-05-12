@@ -1,0 +1,35 @@
+#api-form {
+  .copyValue {
+    position: absolute;
+    top: 39px;
+    right: 11px;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .viewValue {
+    position: absolute;
+    top: 39px;
+    right: 40px;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .form-control {
+    &.secret {
+      padding-right: 60px;
+    }
+  }
+
+  #regenerateClientSecret {
+    margin-top: 31px;
+  }
+}

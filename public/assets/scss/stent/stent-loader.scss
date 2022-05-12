@@ -1,0 +1,47 @@
+.ui-loader {
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+
+  .spinner-grow {
+    opacity: 0.5;
+
+    .sr-only {
+      color: $purple;
+    }
+  }
+}
+
+/* If the loader is used in main content */
+.main-content > .ui-loader {
+  position: fixed;
+}
+
+@media (min-width: 768px) {
+  .main-content > .ui-loader {
+    margin-left: $navbar-vertical-width;
+  }
+  .main-content > .ui-loader .spinner-grow {
+    margin-left: -($navbar-vertical-width);
+  }
+}
+
+/*
+.stent-disable {
+  opacity: 0.5;
+  pointer-events: none;
+}
+*/
+
+/*
+@media (min-width: 768px) {
+  
+}
+*/

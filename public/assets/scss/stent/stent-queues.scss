@@ -1,0 +1,199 @@
+
+#queue-filter-wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+  border-top: 1px solid $gray-200;
+  border-bottom: 1px solid $gray-200;
+  //margin-top: -33px;
+
+  #filter-by-title {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .form-group {
+    margin: 0;
+  }
+
+  .filter-table, .sort-table {
+    max-width: 200px;
+    &.active {
+      background-color: $primary;
+      color: #ffffff;
+    }
+  }
+
+  .filter-table-select, .sort-table-select {
+    font-size: 12px;
+    height: 30px;
+    padding: 0 10px;
+  }
+
+  .filter-table-input {
+    font-size: 12px;
+    height: 30px;
+    border-radius: 4px;
+  }
+
+  #filter-table-queue-date {
+    background-color: #ffffff !important;
+    color: $black !important;
+    opacity: 1 !important;
+  }
+
+  #filter-table-queue-date.active {
+    background-color: $primary !important;
+    color: $white !important;
+  }
+}
+
+#queue-wrapper {
+  min-height: 1px;
+  flex-direction: column;
+  flex: 1;
+
+  #queue-table-wrapper {
+    margin-bottom: 20px;
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #queue-table {
+    position: relative;
+    height: 100%;
+    //display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    background-color: $white;
+    border-left: 1px solid $gray-200;
+    border-right: 1px solid $gray-200;
+  }
+
+  #queue-table-footer {
+    display: flex;
+    padding: 0.7rem 1rem;
+    background-color: $gray-200;
+    border-bottom-left-radius: calc(0.5rem - 1px);
+    border-bottom-right-radius: calc(0.5rem - 1px);
+
+    strong {
+      font-size: 12px;
+      flex: 1;
+      text-align: right;
+    }
+  }
+
+  .queue-icon {
+    height: 24px;
+  }
+
+  .badge-queue {
+    font-size: 12px;
+    color: $white;
+
+    &:first-letter{
+      text-transform: capitalize;
+    }
+  }
+
+  .badge-queued {       background-color: #265866;}
+  .badge-pulled, .badge-pending {     background-color: #5478ed;}
+  .badge-scheduled {    background-color: #999999;}
+  .badge-processed {         background-color: #009ee2;}
+  .badge-rejected {     background-color: #e21445;}
+  .badge-canceled {     background-color: #f98d21;}
+  .badge-approved {     background-color: #1ad369;}
+  .badge-removed {     background-color: #A5133D;}
+  .badge-unknown {     background-color: $gray-400;}
+
+  .avatar-ai-score {
+    position: absolute;
+    border: 1px solid $gray-400;
+    border-radius: 100%;
+    width: 46px;
+    height: 46px;
+    top: -3px;
+    left: -3px;
+
+    .ai-icon {
+      display: block;
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      top: -2px;
+      left: -2px;
+    }
+  }
+
+  .contact-avatar, .owner-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+  }
+
+  .contact-name {
+    font-weight: bold;
+    line-height: 130%;
+    padding-right: 20px;
+  }
+
+  .contact-job-title {
+    font-size: 12px;
+    overflow: hidden;
+    height: 17px;
+    padding-right: 20px;
+  }
+
+  .owner-name {
+    line-height: 130%;
+  }
+
+  .badge-campaign-program {
+    white-space: normal !important;
+    white-space: normal;
+    max-height: 20px;
+    overflow: hidden;
+    line-height: 16px;
+  }
+
+  .a-contact {
+    cursor: pointer;
+  }
+  
+  .open-actions {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.90;
+    }
+  }
+
+  .rankingSVG {
+    transform: rotate(-90deg);
+  }
+
+  .rankingValue {
+    position: absolute;
+    top: 0;
+    width: 30px;
+    font-size: 11px;
+    left: 0;
+    text-align: center;
+    margin-left: 5px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .rankingSVG_background {
+    stroke: $gray-400;
+  }
+
+  // .select-one-wrapper {
+  //   cursor: pointer;
+  // }
+
+}

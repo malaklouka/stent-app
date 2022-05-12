@@ -1,0 +1,65 @@
+/***member*/
+
+.stent-member {
+  position: relative;
+}
+.stent-member .banner-image {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  height: 127px;
+  background-position: center center;
+  background-size: cover;
+}
+.stent-member .card-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.stent-member .card-text small {
+  display: block;
+  height: 40px;
+  overflow: hidden;
+}
+.stent-member .ssi-score {
+  display: block;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+.stent-member .progress {
+  height: 8px;
+}
+.stent-member .card .dropdown {
+  width: 27px;
+  height: 27px;
+  text-align: center;
+  border-radius: 27px;
+  border: 1px solid #fff;
+}
+.stent-member .card .dropdown:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.stent-two-cols .stent-two-cols-small,
+.stent-two-cols .stent-two-cols-large {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  min-height: 5rem;
+}
+
+@media (min-width: 992px) {
+  .stent-two-cols .stent-two-cols-small,
+  .stent-two-cols .stent-two-cols-large {
+    margin-bottom: 0;
+  }
+  .stent-two-cols .stent-two-cols-small {
+    border-right: 1px solid #ebe3f6;
+    overflow: hidden;
+    padding-bottom: 0.75rem;
+  }
+  .stent-two-cols .stent-two-cols-large {
+    height: calc(100% - 1rem);
+    overflow: auto;
+    padding-bottom: 1rem;
+  }
+}

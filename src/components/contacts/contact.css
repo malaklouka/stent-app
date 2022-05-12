@@ -1,0 +1,11 @@
+/***contact*/
+#stent-contacts #contacts-list-col .card-header {
+  flex-grow: 0;
+}
+
+#stent-contacts #contacts-result {
+  overflow: auto;
+}
+#stent-contacts #contacts-result li {
+  cursor: pointer;
+}

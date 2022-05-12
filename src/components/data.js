@@ -1,0 +1,1 @@
+export const search ={img: "./assets/img/search.svg"}

@@ -1,0 +1,233 @@
+#media-form {
+  #media-original-url,
+  #media-picture-url {
+    padding-right: 50px;
+  }
+  #launch-get-url-data,
+  #open-image-uploader {
+    position: absolute;
+    top: 33px;
+    right: 4px;
+    font-size: 23px;
+    cursor: pointer;
+    padding: 0 10px;
+    color: $gray-500;
+    &:hover {
+      color: $primary;
+    }
+  }
+  .uploadcare--widget {
+    position: absolute;
+    top: 37px;
+    right: 7px;
+    font-size: 12px;
+    .uploadcare--widget__button_type_open {
+      background-color: $primary;
+    }
+  }
+  #preview-image {
+    display: none;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 250px;
+  }
+  .media-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 70%;
+      height: 70%;
+    }
+  }
+  .media-image-wrapper {
+    width: 40px;
+    height: 40px;
+    border-radius: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 50%;
+      height: 50%;
+    }
+  }
+}
+
+.aMedia {
+  &.aMedia-in-modal {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid $gray-200;
+
+    .mediaImageWrapper {
+      width: 100px;
+      height: 100px;
+    }
+    .media-title {
+      margin: 9px 0 4px 0;
+    }
+  }
+  .insert-media {
+    cursor: pointer;
+  }
+  .media-title {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 120%;
+    margin: 2px 0 3px 0;
+  }
+  .media-summary {
+    display: block;
+    max-height: 34px;
+    font-size: 13px;
+    line-height: 145%;
+    overflow: hidden;
+    margin: 0;
+  }
+  .mediaImageWrapper {
+    width: 84px;
+    height: 84px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #f2edf9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+      max-width: 84px;
+      max-height: 84px;
+    }
+  }
+  .mediaTypeBadge {
+    display: flex;
+    padding: 5px 10px;
+    border-radius: 30px;
+    color: #FFFFFF;
+
+    img {
+      width: 20px;
+      height: 20px;
+      margin-right: 3px;
+    }
+  }
+
+  .open-actions {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.90;
+    }
+  }
+
+  &:hover {
+    background-color: #ffffff !important;
+  }
+}
+
+
+#medias-filter-wrapper {
+  background-color: #ffffff;
+  padding: 10px;
+  border-top: 1px solid $gray-200;
+  border-bottom: 1px solid $gray-200;
+
+  #filter-by-title {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  .form-group {
+    margin: 0;
+  }
+
+  .filter-table {
+    max-width: 250px;
+    &.active {
+      background-color: $primary;
+      color: #ffffff;
+    }
+  }
+
+  .filter-table-select {
+    font-size: 12px;
+    height: 30px;
+    padding: 0 10px;
+  }
+
+  .filter-table-input {
+    font-size: 12px;
+    height: 30px;
+    border-radius: 4px;
+  }
+}
+
+
+#medias-wrapper {
+  min-height: 1px;
+  flex-direction: column;
+  flex: 1;
+
+  #medias-grid-wrapper {
+    margin-bottom: 20px;
+    height: calc(100% - 20px);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #medias-result {
+    position: relative;
+    height: 100%;
+    //display: flex;
+    //flex-direction: column;
+    overflow-y: scroll;
+    background-color: $white;
+    border-left: 1px solid $gray-200;
+    border-right: 1px solid $gray-200;
+
+    .open-actions {
+      opacity: 0.5;
+  
+      &:hover {
+        opacity: 0.90;
+      }
+    }
+    .stent-table .table-hover tr:hover {
+      background-color: #ffffff;
+    }
+    .custom-control-input ~ .custom-control-label::before {
+      background-color: $red;
+    }
+  
+    .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: $green;
+    }
+  }
+
+  #medias-footer {
+    display: flex;
+    padding: 0.7rem 1rem;
+    background-color: $gray-200;
+    border-bottom-left-radius: calc(0.5rem - 1px);
+    border-bottom-right-radius: calc(0.5rem - 1px);
+
+    strong {
+      font-size: 12px;
+      flex: 1;
+      text-align: right;
+    }
+  }
+
+}

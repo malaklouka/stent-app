@@ -1,0 +1,45 @@
+// BREAKPOINTS TO USE INTO SCSS.
+@mixin breakpoint($point, $value) {
+  @if ($point==xxl) {
+    @media (#{$value}-width: 2000px) {
+      @content;
+    }
+  }
+  @if ($point==large) {
+    @media (#{$value}-width: 1400px) {
+      @content;
+    }
+  } @else if ($point==xl) {
+    @media (#{$value}-width: 1280px) {
+      @content;
+    }
+  } @else if ($point==xlm) {
+    @media (#{$value}-width: 1152px) {
+      @content;
+    }
+  } @else if ($point==xls) {
+    @media (#{$value}-width: 1024px) {
+      @content;
+    }
+  } @else if ($point==lg) {
+    @media (#{$value}-width: 992px) {
+      @content;
+    }
+  } @else if ($point==md) {
+    @media (#{$value}-width: 768px) {
+      @content;
+    }
+  } @else if ($point==sm) {
+    @media (#{$value}-width: 576px) {
+      @content;
+    }
+  } @else if ($point==xs) {
+    @media (#{$value}-width: 0) {
+      @content;
+    }
+  } @else if ($point==hsm) {
+    @media (#{$value}-height: 836px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,233 @@
+.ambassador-of-the-week {
+  font-size: 14px;
+  letter-spacing: -0.05em;
+
+  &_avatar {
+    width: 10em;
+    height: 10em;
+    border-radius: 10em;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: 1.5em;
+  }
+
+  &_description-wrapper {
+    color: white;
+  }
+
+  &_ssi {
+    font-size: 5em;
+    height: 0.9em;
+    overflow: hidden;
+    line-height: 1em;
+    margin-bottom: 0.2em;
+    small {
+      font-size: 0.3em;
+      position: relative;
+      top: -1.6em;
+    }
+  }
+
+  &_first-name {
+    font-size: 1.5em;
+    line-height: 100%;
+    margin-bottom: 0.2em;
+  }
+
+  &_last-name {
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 100%;
+  }
+
+  &_stars {
+    color: $yellow;
+    margin-top: 10px;
+    font-size: 27px;
+  }
+
+  &_kpi {
+    div {
+      height: 5em;
+      width: 5em;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      margin: 0 auto 1.5em auto;
+      opacity: 0.5;
+    }
+    p {
+      color: $gray-400;
+      font-size: 3em;
+      height: 1em;
+      line-height: 1em;
+      margin: 0 0 0.1em 0;
+      position: relative;
+    }
+    small {
+      font-size: 0.5em;
+      position: relative;
+      top: -0.7em;
+    }
+    span {
+      color: $gray-600;
+      font-size: 1.15em;
+    }
+    b {
+      width: 0.6em;
+      height: 0.6em;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: -2em;
+      display: block;
+      right: 0.8em;
+      &.up {
+        background-image: url("/assets/img/dashboard/sentiment-up.svg");
+      }
+      &.down {
+        background-image: url("/assets/img/dashboard/sentiment-down.svg");
+      }
+    }
+  }
+}
+
+.dashboard-table {
+  font-size: 14px;
+  letter-spacing: -0.01em;
+
+  .ui-link {
+    display: none;
+  }
+  tr:hover .ui-link {
+    display: block;
+  }
+
+  .card-header-title {
+    font-size: 1.4em;
+  }
+
+  .table thead th {
+    font-size: 0.75em;
+    letter-spacing: inherit !important;
+    font-weight: 100;
+    white-space: nowrap;
+  }
+
+  th,
+  td {
+    padding: 0.7em;
+  }
+
+  th span {
+    //cursor: pointer;
+  }
+
+  .sort-button {
+    // cursor: pointer;
+
+    // &_active {
+    //   color: $gray-600;
+    //   background: #ffffff;
+    //   border-radius: 20px;
+    //   vertical-align: -1px;
+    //   border: 1px solid $gray-600;
+    // }
+  }
+  .stars {
+    color: $yellow;
+    margin-left: 5px;
+    font-size: 15px;
+  }
+
+  small {
+    position: relative;
+    top: -0.19em;
+    font-size: 0.95em;
+  }
+  td {
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+
+    &.align-right {
+      justify-content: flex-end;
+    }
+  }
+
+  .lv-0,
+  .lv-1 {
+    .toggle-children-visibility {
+      cursor: pointer;
+    }
+  }
+
+  .lv-0 .align-right {
+    color: $gray-400;
+    font-weight: bold;
+  }
+
+  .lv-1 .align-right {
+    color: $gray-600;
+    font-weight: bold;
+  }
+
+  .lv-1 td:first-child {
+    background-color: $gray-100;
+  }
+  .lv-2 {
+    td:nth-child(1),
+    td:nth-child(2) {
+      background-color: $gray-100;
+    }
+  }
+  .moreAvatar {
+    background-color: $gray-600;
+    color: $white;
+    padding: 0.15em 0.55em 0.15em 0.4em;
+    border-radius: 3em;
+    border: 2px solid white;
+    margin-left: -8px;
+    font-size: 0.7em;
+    line-height: 18px;
+    position: relative;
+    top: 1px;
+  }
+
+  .aMedia {
+    .media-title {
+      font-size: 1em;
+      font-weight: normal;
+    }
+    .mediaImageWrapper {
+      width: 4em;
+      height: 4em;
+    }
+  }
+
+  .top-ambassador-evolution-chart-wrapper {
+    width: 75px;
+    padding-left: 1em;
+  }
+
+  .top-ambassador-evolution-chart {
+    height: 30px;
+  }
+
+  .top-ambassador-ssi-evolution-wrapper {
+    span {
+      font-size: 1.3em;
+      position: relative;
+      top: -2px;
+    }
+    .top-ambassador-ssi-evolution-value {
+      vertical-align: 4px;
+      font-size: 0.8em;
+      color: $gray-800;
+      display: inline-block;
+      width: 45px;
+    }
+  }
+}

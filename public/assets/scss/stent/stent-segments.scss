@@ -1,0 +1,42 @@
+#segments-result {
+  .custom-control-input ~ .custom-control-label::before {
+    background-color: $red;
+  }
+
+  .custom-control-input:checked ~ .custom-control-label::before {
+    background-color: $green;
+  }
+
+  .custom-switch {
+    transform: scale(0.75);
+    transform-origin: left;
+  }
+  .custom-control-label {
+    font-size: 18px;
+  }
+  .open-actions {
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 0.90;
+    }
+  }
+  .stent-table .table-hover tr:hover {
+    background-color: #ffffff;
+  }
+}
+#segment-form {
+  #segment-query-javascript.is-invalid,
+  #segment-query-aql-matches.is-invalid,
+  #segment-query-aql-match.is-invalid {
+    border: 1px solid $red !important;
+  }
+
+  #segment-query-javascript + .invalid-feedback,
+  #segment-query-aql-matches + .invalid-feedback,
+  #segment-query-aql-match + .invalid-feedback {
+    position: relative;
+    top: 380px;
+  }
+}
+

@@ -1,0 +1,11 @@
+.campaign-nudge-nav-item {
+  .remove-nudge-button {
+    visibility: hidden;
+  }
+
+  &:hover {
+    .remove-nudge-button {
+      visibility: visible;
+    }
+  }
+}

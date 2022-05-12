@@ -1,0 +1,53 @@
+/**
+ * Dashkit v1.3.4
+ *
+ * Custom variables followed by Dashkit variables followed by Bootstrap variables
+ * to ensure cascade of styles.
+ */
+
+// Bootstrap functions
+@import "../../../node_modules/bootstrap/scss/functions";
+
+// Custom variables
+@import "stent/stent-variables";
+
+// Dashkit variables
+@import "dashkit/variables";
+
+// Bootstrap core
+@import "../../../node_modules/bootstrap/scss/bootstrap";
+
+// Dashkit core
+@import "dashkit/dashkit";
+
+@import "stent/stent-mixins.scss";
+
+// Custom core
+@import "stent/stent-interface";
+@import "stent/stent-toast";
+@import "stent/stent-sidebar";
+@import "stent/stent-loader";
+@import "stent/stent-tenant-contacts";
+@import "stent/stent-finder";
+@import "stent/stent-campains";
+@import "stent/stent-dashboard";
+@import "stent/stent-home";
+@import "stent/stent-segments";
+@import "stent/stent-medias";
+@import "stent/stent-planification";
+@import "stent/stent-planification-v3";
+@import "stent/stent-members";
+@import "stent/stent-funnel";
+@import "stent/stent-choose-tenant";
+@import "stent/stent-api";
+@import "stent/stent-funnel";
+@import "stent/stent-apps";
+@import "stent/stent-edit-profile";
+@import "stent/stent-queues";
+@import "stent/stent-accounts";
+@import "stent/stent-ea";
+@import "stent/stent-datatable";
+@import "stent/stent-symbol";
+@import "stent/daterangepicker";
+// @import "stent/bootstrap-select";
+@import "stent/stent-statistics";
